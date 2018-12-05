@@ -1,0 +1,26 @@
+var express = require('express');
+var router = express.Router();
+var ctrlMain = require('../controllers/main');
+var ctrlCourseworks = require('../controllers/courseworks');
+var ctrlEduprocess = require('../controllers/eduprocess');
+var ctrlExams = require('../controllers/exams');
+var ctrlMethodicals = require('../controllers/methodicals');
+var ctrlProtocols = require('../controllers/protocols');
+var ctrlShedules = require('../controllers/shedules');
+var ctrlTeachload = require('../controllers/teachload');
+
+router.get('/', ctrlMain.main);
+router.get('/main', ctrlMain.main);
+router.get('/courseworks', ctrlCourseworks.courseworks);
+router.get('/eduprocess', ctrlEduprocess.eduprocess);
+router.post('/eduprocess/init', ctrlEduprocess.eduprocessInitName);
+router.post('/eduprocess', ctrlEduprocess.eduprocessPOST);
+router.get('/teachlist', ctrlEduprocess.teachlist);
+router.get('/exams', ctrlExams.exams);
+router.get('/methodicals', ctrlMethodicals.methodicals);
+router.post('/methodicals', ctrlMethodicals.methodicalsPOST);
+router.get('/protocols', ctrlProtocols.protocols);
+router.get('/shedules', ctrlShedules.shedules);
+router.get('/teachload', ctrlTeachload.getTeachload);
+router.post('/teachload', ctrlTeachload.postTeachload);
+module.exports = router;

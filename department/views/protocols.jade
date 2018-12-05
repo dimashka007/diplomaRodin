@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div
+    iframe#ifr(src="https://docs.google.com/document/d/1dGT0G3GyJRzqLlPOF74LBiyttyq4LBe1j3Ve07K7f4g/edit" width="60%" height="100%" align="right" frameborder = "no")
+    script.
+      window.onload=function() {
+      document.getElementById("ifr").style.height=window.innerHeight-77+"px";
+      }
+  .prot-list  
+    ul.list-group
+      each val in ProtList
+        li.list-group-item
+          a(href='/protocols/' + val)= val

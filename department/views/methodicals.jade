@@ -1,0 +1,39 @@
+extends layout
+
+block content
+      form(action='/methodicals', method="post", id="adddisc")
+        | Ф.І.О. викладача:
+        select(name="name" id="mySelect" form="adddisc")
+          each val in persons
+            option(value='#{val}')= val
+        |   Курс:
+        input(type='text', name='course')
+        |   Семестр:
+        input(type='text', name='sem')
+        |   Назва дисципліни:
+        input(type='text', name='disc')
+        input(type='submit', value='Додати')
+      br
+      br
+      table.table.table-striped.table-bordered.table-hover.dataTables-example
+        thead
+          tr
+            th Ф.І.О. викладача
+            th Курс
+            th Семестр
+            th Дисципліна            
+        tbody
+          each val in data
+            tr
+              td= val.prof
+              td= val.kurs
+              td.center= val.semestr
+              td= val.name           
+        tfoot
+          tr
+          th Ф.І.О. викладача
+          th Курс
+          th Семестр
+          th Дисципліна           
+    
+  

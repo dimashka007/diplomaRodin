@@ -1,0 +1,119 @@
+extends layout
+
+block content
+
+  
+  form(action='/eduprocess/init', method='post', id="sendinf")
+  
+    select(value='#{username}' name="name"  form="sendinf" )
+      option(value='')  
+      each val in persons
+        option(value='#{val}')= val       
+      input(type="submit" value="Показати") 
+      | !{username}
+
+  if username 
+   
+    h1 Навчально-методична робота
+    form(action='/eduprocess', method="post", id="ed")
+      |   Назва. Кількісна характеристика
+      input(type='text', required='', name='quantity')
+      |   Термін виконання
+      input(type='text', required='', name='time')
+      input(type='hidden', name='table', value='ed')
+      input(type='submit', value='Додати')
+    br
+    br
+    table.table.table-striped.table-bordered.table-hover.dataTables1
+      thead
+        tr
+          th Назва. Кількісна характеристика
+          th Термін виконання                    
+      tbody
+        each val in ed
+          tr
+            td= val.quantity
+            td= val.time                     
+      tfoot
+        tr
+        th Назва. Кількісна характеристика
+        th Термін виконання  
+    br
+    br  
+    h1 Науково-дослідна робота
+    form(action='/eduprocess', method="post", id="sci", #{disabled})
+      |   Назва. Кількісна характеристика
+      input(type='text', required='', name='quantity')
+      |   Термін виконання
+      input(type='text', required='', name='time')
+      input(type='hidden', name='table', value='sci')
+      input(type='submit', value='Додати')
+    br
+    br
+    table.table.table-striped.table-bordered.table-hover.dataTables2
+      thead
+        tr
+          th Назва. Кількісна характеристика
+          th Термін виконання                   
+      tbody
+        each val in sci
+          tr
+            td= val.quantity
+            td= val.time                 
+      tfoot
+        tr
+        th Назва. Кількісна характеристика
+        th Термін виконання
+    br
+    br 
+    h1 Організаційно-методична робота
+    form(action='/eduprocess', method="post", id="org", #{disabled})
+      |   Назва. Кількісна характеристика
+      input(type='text', required='', name='quantity')
+      |   Назва дисципліни:
+      input(type='text', required='', name='time')
+      input(type='hidden', name='table', value='org')
+      input(type='submit', value='Додати')
+    br
+    br
+    table.table.table-striped.table-bordered.table-hover.dataTables3
+      thead
+        tr
+          th Назва. Кількісна характеристика
+          th Термін виконання                 
+      tbody
+        each val in org
+          tr
+            td= val.quantity
+            td= val.time                  
+      tfoot
+        tr
+        th Назва. Кількісна характеристика
+        th Термін виконання
+    br
+    br 
+    h1 Громадська робота та інші види робіт
+    form(action='/eduprocess', method="post", id="comm", #{disabled})
+      |   Назва. Кількісна характеристика
+      input(type='text', required='', name='quantity')
+      |   Термін виконання
+      input(type='text', required='', name='time')
+      input(type='hidden', name='table', value='comm')
+      input(type='submit', value='Додати')
+    br
+    br
+    table.table.table-striped.table-bordered.table-hover.dataTables4
+      thead
+        tr
+          th Назва. Кількісна характеристика
+          th Термін виконання                   
+      tbody
+        each val in comm
+          tr
+            td= val.quantity
+            td= val.time                     
+      tfoot
+        tr
+        th Назва. Кількісна характеристика
+        th Термін виконання
+    

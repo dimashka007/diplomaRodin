@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container
+    .col-lg-4
+      h2 Методичні вказівки з виконання бакалаврської роботи
+    .col-lg-4
+      h2 Методичні вказівки з виконання курсової роботи
+    .col-lg-4
+      h2 Методичні вказівки з виконання магістрської роботи
+  .container
+    ul.list-group
+      each val in ListWorks
+        .col-lg-4
+          li.list-group-item
+            a(href='/courseworks/' + val)= val

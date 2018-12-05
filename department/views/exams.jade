@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .container    
+    .col-lg-4
+      h2 Білети на магістрський іспит
+    .col-lg-4
+      h2 Білети на державний іспит
+    .col-lg-4
+      h2 Білети на бакалаврський іспит
+  .container    
+    .col-lg-4
+      ul.list-group
+        each val in listMag
+          li.list-group-item
+            a(href='examsMagstr/' + val)= val            
+    .col-lg-4
+      ul.list-group
+        each val in listDac
+          li.list-group-item
+            a(href='examsDac/' + val)= val 
+    .col-lg-4
+      ul.list-group
+        each val in listMs
+          li.list-group-item
+            a(href='examsMs/' + val)= val

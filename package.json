@@ -1,0 +1,27 @@
+{
+  "name": "diploma",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@evxn/jsonpath": "^1.3.4",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "docx2html": "^1.1.0",
+    "express": "~4.16.0",
+    "express-jquery": "^1.8.3",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "level": "^4.0.0",
+    "mammoth": "^1.4.6",
+    "mime": "^2.3.1",
+    "morgan": "~1.9.0",
+    "pdfmake": "^0.1.36",
+    "uuid": "^3.2.1",
+    "xlsx": "^0.13.0",
+    "xlsx-style": "^0.8.13"
+  }
+}

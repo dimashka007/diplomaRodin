@@ -1,0 +1,195 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700', type='text/css')
+    link(rel='stylesheet', type='text/css', href='https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css')
+    link(rel='stylesheet', type='text/css', href='https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')    
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(type='text/javascript', charset='utf8', src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js')
+    script(type='text/javascript', charset='utf8', src='https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js')
+    script(type='text/javascript', charset='utf8', src='https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js')
+    script(type='text/javascript', charset='utf8', src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js')
+    script(type='text/javascript', charset='utf8', src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js')
+    script(type='text/javascript', charset='utf8', src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js')
+    script(type='text/javascript', charset='utf8', src='https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js')
+    script(type='text/javascript', charset='utf8', src='https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js')
+    
+    script(type='text/javascript').
+      $(document).ready( function () {
+        $('.dataTables-example').DataTable({
+          dom: 'fBrltip',
+          buttons: [
+           'copy', 'csv', 'excel', 'pdf', 'print'
+         ],
+         "language": {
+           "decimal":        "",
+           "emptyTable":     "Жодного запису",
+           "info":           "Показати від _START_ до _END_ з _TOTAL_ записів",
+           "infoEmpty":      "Показати 0 записів",
+           "infoFiltered":   "(filtered from _MAX_ total entries)",
+           "infoPostFix":    "",
+           "thousands":      ",",
+           "lengthMenu":     "Показати _MENU_ записів",
+           "loadingRecords": "Loading...",
+           "processing":     "Processing...",
+           "search":         "Пошук:",
+           "zeroRecords":    "не знайдено жодного запису",
+           "paginate": {
+               "first":      "First",
+               "last":       "Last",
+               "next":       "Наступна",
+               "previous":   "Попередня"
+         },
+         "aria": {
+             "sortAscending":  ": activate to sort column ascending",
+             "sortDescending": ": activate to sort column descending"
+         }
+        }
+        });
+        $('.dataTables1').DataTable({
+          "language": {
+            "decimal":        "",
+            "emptyTable":     "Жодного запису",
+            "info":           "Показати від _START_ до _END_ з _TOTAL_ записів",
+            "infoEmpty":      "Показати 0 записів",
+            "infoFiltered":   "(filtered from _MAX_ total entries)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "Показати _MENU_ записів",
+            "loadingRecords": "Loading...",
+            "processing":     "Processing...",
+            "search":         "Пошук:",
+            "zeroRecords":    "не знайдено жодного запису",
+            "paginate": {
+                "first":      "First",
+                "last":       "Last",
+                "next":       "Наступна",
+                "previous":   "Попередня"
+          },
+          "aria": {
+              "sortAscending":  ": activate to sort column ascending",
+              "sortDescending": ": activate to sort column descending"
+          }
+         }
+          });
+        $('.dataTables2').DataTable({
+          "language": {
+            "decimal":        "",
+            "emptyTable":     "Жодного запису",
+            "info":           "Показати від _START_ до _END_ з _TOTAL_ записів",
+            "infoEmpty":      "Показати 0 записів",
+            "infoFiltered":   "(filtered from _MAX_ total entries)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "Показати _MENU_ записів",
+            "loadingRecords": "Loading...",
+            "processing":     "Processing...",
+            "search":         "Пошук:",
+            "zeroRecords":    "не знайдено жодного запису",
+            "paginate": {
+                "first":      "First",
+                "last":       "Last",
+                "next":       "Наступна",
+                "previous":   "Попередня"
+          },
+          "aria": {
+              "sortAscending":  ": activate to sort column ascending",
+              "sortDescending": ": activate to sort column descending"
+          }
+         }
+          });
+        $('.dataTables3').DataTable({
+          "language": {
+            "decimal":        "",
+            "emptyTable":     "Жодного запису",
+            "info":           "Показати від _START_ до _END_ з _TOTAL_ записів",
+            "infoEmpty":      "Показати 0 записів",
+            "infoFiltered":   "(filtered from _MAX_ total entries)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "Показати _MENU_ записів",
+            "loadingRecords": "Loading...",
+            "processing":     "Processing...",
+            "search":         "Пошук:",
+            "zeroRecords":    "не знайдено жодного запису",
+            "paginate": {
+                "first":      "First",
+                "last":       "Last",
+                "next":       "Наступна",
+                "previous":   "Попередня"
+          },
+          "aria": {
+              "sortAscending":  ": activate to sort column ascending",
+              "sortDescending": ": activate to sort column descending"
+          }
+         }
+          });
+        $('.dataTables4').DataTable({
+          "language": {
+            "decimal":        "",
+            "emptyTable":     "Жодного запису",
+            "info":           "Показати від _START_ до _END_ з _TOTAL_ записів",
+            "infoEmpty":      "Показати 0 записів",
+            "infoFiltered":   "(filtered from _MAX_ total entries)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "Показати _MENU_ записів",
+            "loadingRecords": "Loading...",
+            "processing":     "Processing...",
+            "search":         "Пошук:",
+            "zeroRecords":    "не знайдено жодного запису",
+            "paginate": {
+                "first":      "First",
+                "last":       "Last",
+                "next":       "Наступна",
+                "previous":   "Попередня"
+          },
+          "aria": {
+              "sortAscending":  ": activate to sort column ascending",
+              "sortDescending": ": activate to sort column descending"
+          }
+         }
+          });
+        $('table').addClass('table-bordered table-hover table-condensed table-responsive table-striped');
+        $('form').addClass('form-inline');
+        $('input').addClass('form-control');
+        $('select').addClass('form-control');
+      });
+      
+  nav.navbar.navbar-inverse.navbar-default
+    div.container-fluid
+      div.navbar-header
+        a.navbar-brand(href="/main") Кафедра ОТ
+      ul.nav.navbar-nav
+        li.dropdown
+          a.dropdown-toggle(data-toggle='dropdown', href='#')
+            | Навчальний процес
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='/teachlist') Список викладачів
+            li
+              a(href='/eduprocess') Індивідуальний план
+        li
+          a(href="/methodicals") Методична робота
+        li
+          a(href="/teachload") Педагогічне навантаження
+        li
+          a(href="/shedules") Графіки
+        li
+          a(href="/exams") Екзаменаційні билети
+        li
+          a(href="/protocols") Протоколи засідань кафедри
+        li
+          a(href="/courseworks") Курсові / бакалаврські / магістрські роботи
+  body
+    #body
+      
+      block content
+    

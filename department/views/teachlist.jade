@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    each person in persons 
+      .col-lg-4          
+          .col-lg-12
+            .widget-head-color-box.bg-olive.p-lg.text-center
+              .m-b-md
+                h2.font-bold= person.name
+                .m-b-md
+                  img.card-img-top.img-circle.circle-border(width="200px" height="200px" alt='image', src='#{person.photo}')
+                  div                
+                    p #{person.position}
